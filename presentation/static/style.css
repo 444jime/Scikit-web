@@ -1,0 +1,187 @@
+/* TODO */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #333;
+}
+
+header p {
+    margin: 15px 0 25px;
+    color: #555;
+    font-size: 18px;
+}
+
+/* INGRESO DE .CSV */
+.form-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.input-archivo {
+    padding: 10px 15px;
+    font-size: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #555;
+    cursor: pointer;
+}
+
+.boton-subir {
+    padding: 11px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background: #ffffff;
+    border: 2px solid #333;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.boton-subir:hover {
+    background: #333;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* ARBOL */
+.arbol {
+    width: 90vw;
+    max-width: 2000px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    margin-top: 20px;
+}
+
+.error-msg {
+    color: #d9534f;
+    background: #f9f2f4;
+    padding: 10px 20px;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* MATRIZ */
+.matriz-container h3 {
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tabla-matriz {
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+
+.etiqueta {
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.etiqueta, .etiqueta-fila {
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.etiqueta-fila {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.celda {
+    width: 100px;
+    height: 80px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 8px;
+}
+
+.numero {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+}
+
+.dato-correcto {
+    color: #065f46;
+    border: 1px solid;
+}
+
+.dato-error {
+    color: #991b1b;
+    border: 1px solid;
+}
+
+.leyenda {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #666;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.verde { background-color: #10b981; }
+.rojo { background-color: #ef4444; }
