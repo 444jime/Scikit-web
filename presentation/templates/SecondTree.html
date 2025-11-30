@@ -11,18 +11,24 @@
     <header>
         <h1>Introvert vs Extrovert - Decision Tree</h1>
 
-        <p>Para generar tu propio árbol, hace click aqui:</p>
+        <p>Subí tu .CSV para analizarlo con Machine Learning y generar tu propio árbol.</p>
 
-        <div class="boton-contenedor">
-            <a href="/load" class="boton-subir">Quiero probarlo</a>
-        </div>
+        <form action="/load" method="POST" enctype="multipart/form-data" class="form-contenedor">
+            <input type="file" name="file" class="input-archivo" required>
+            <button type="submit" class="boton-subir">Procesar</button>
+        </form>
     </header>
 
     <main>
-        {% if img_name %}
-        <img src="{{ url_for('static', filename=img_name) }}" alt="Árbol de decisiones" class="arbol">
+        {% if error %}
+        <div class="error-msg"> {{error}} </div>
         {% endif %}
 
+        {% if img_name %}
+        <img src="{{ url_for('static', filename=img_name) }}" class="arbol" alt="Árbol Generado">
+        {% endif %}
+
+        {% if resultados_dict %}
         <title>Resultados del Modelo</title>
 
         <h1>Resultados del Entrenamiento</h1>
@@ -81,6 +87,9 @@
             </p>
         </div>
 
+        </div>
+        {% endif %}
+        <a href="/" class="boton-subir">Volver</a>
     </main>
 
 </body>
